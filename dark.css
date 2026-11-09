@@ -1,0 +1,14 @@
+/* Dark mode par inversion : actif par défaut, coupé par la classe .stripe-dark-off */
+html:not(.stripe-dark-off) {
+  background: #fff !important;
+  filter: invert(0.92) hue-rotate(180deg) !important;
+}
+
+/* Ré-inverse les médias pour garder leurs vraies couleurs */
+html:not(.stripe-dark-off) img,
+html:not(.stripe-dark-off) picture,
+html:not(.stripe-dark-off) video,
+html:not(.stripe-dark-off) canvas,
+html:not(.stripe-dark-off) [style*="background-image"] {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
